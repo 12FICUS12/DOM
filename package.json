@@ -6,6 +6,7 @@
     "build": "webpack --mode production",
     "lint": "eslint . --fix",
     "test": "jest",
+    "start": "http-server ./dist",
     "coverage": "jest --coverage"
   },
   "keywords": [],
