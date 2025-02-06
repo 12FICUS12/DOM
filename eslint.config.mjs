@@ -5,6 +5,7 @@ import pluginReact from "eslint-plugin-react";
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   { files: ["**/*.{js,mjs,cjs,jsx}"] },
+  { ignores: ["dist/**"]},
   {
     languageOptions: {
       globals: {
@@ -16,6 +17,7 @@ export default [
         module: "readonly",
         __dirname: "readonly",
         exports: "readonly",
+        
       },
     },
   },
