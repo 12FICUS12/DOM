@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "webpack serve --mode development",
     "build": "webpack --mode production",
     "lint": "eslint . --fix",
     "test": "jest",
-    "start": "http-server ./dist",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "preshow:coverage": "npm run coverage",
+    "show:coverage": "live-server coverage/lcov-report",
+    "preshow:dist": "npm run build",
+    "show:dist": "live-server dist"
   },
   "keywords": [],
   "author": "",
@@ -19,20 +23,22 @@
     "@eslint/js": "^9.19.0",
     "babel-loader": "^9.2.1",
     "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.0",
     "eslint": "^9.19.0",
     "eslint-plugin-react": "^7.37.4",
     "eslint-webpack-plugin": "^4.2.0",
+    "file-loader": "^6.2.0",
     "globals": "^15.14.0",
     "html-webpack-plugin": "^5.6.3",
     "http-server": "^14.1.1",
     "jest": "^29.7.0",
+    "mini-css-extract-plugin": "^2.9.2",
     "style-loader": "^4.0.0",
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0"
   },
   "dependencies": {
-    "css-minimizer-webpack-plugin": "^7.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   }
